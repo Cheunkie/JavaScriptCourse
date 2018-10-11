@@ -378,37 +378,58 @@
 //john.calcAge();
 //console.log(john);
 
-var john = {
-    fullName : 'John Smith',
-    BMI : 0,
-    mass : 60,
-    height : 1.80,
-    calBMI : function(mass,height){
-    this.BMI = this.mass / (this.height * this.height);
-        return this.BMI;
-    }
-}
+//var john = {
+//    fullName : 'John Smith',
+//    BMI : 0,
+//    mass : 60,
+//    height : 1.80,
+//    calBMI : function(mass,height){
+//    this.BMI = this.mass / (this.height * this.height);
+//        return this.BMI;
+//    }
+//}
+//
+//var mark = {
+//    fullName : 'Mark Smith',
+//    BMI : 0,
+//    mass : 70,
+//    height : 1.70,
+//    calBMI : function(mass,height){
+//    this.BMI = this.mass/(this.height * this.height);
+//        return this.BMI;
+//    }
+//}
+//
+//john.calBMI();
+//mark.calBMI();
+//
+//if (mark.BMI > john.BMI){
+//    console.log("Mark BMI is higher then John with score of " + mark.BMI);
+//}else if(john.BMI > mark.BMI){
+//    console.log("John BMI is higher then Mark with score of " + john.BMI);
+//}else if(john.BMI == mark.BMI){
+//    console.log("Both John and Mark BMI score are the same with John "+ john.BMI + " and Mark "+ mark.BMI);
+//}else{
+//    console.log("Something else");
+//}
 
-var mark = {
-    fullName : 'Mark Smith',
-    BMI : 0,
-    mass : 70,
-    height : 1.70,
-    calBMI : function(mass,height){
-    this.BMI = this.mass/(this.height * this.height);
-        return this.BMI;
-    }
-}
+//for(var i = 0; i <= 20; i+= 2){
+//    console.log(i);
+//}
 
-john.calBMI();
-mark.calBMI();
 
-if (mark.BMI > john.BMI){
-    console.log("Mark BMI is higher then John with score of " + mark.BMI);
-}else if(john.BMI > mark.BMI){
-    console.log("John BMI is higher then Mark with score of " + john.BMI);
-}else if(john.BMI == mark.BMI){
-    console.log("Both John and Mark BMI score are the same with John "+ john.BMI + " and Mark "+ mark.BMI);
-}else{
-    console.log("Something else");
-}
+//var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+//for (var i = 0; i < john.length; i++){
+//    if (typeof john[i] !== 'string') break;
+//    console.log(john[i]);
+//    console.log(i);
+//}
+//var i = 0;
+//while(i < john.length){
+//      console.log(john[i]);
+//    i++;
+//      }
+//
+//for(var i = john.length - 1; i > 0; i-- ){
+//    console.log(john[i]);
+//}
