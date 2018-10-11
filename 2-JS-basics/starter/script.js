@@ -1,3 +1,4 @@
+/*jslint devel: true */
 ////////console.log("Script Loaded!");
 ////////
 ////////console.log("Hello World!"); 
@@ -7,7 +8,7 @@
 ////////var age = 38;
 ////////
 ////////var fullAge = true;
-////////console.log(fullAge)
+////////console.log(fullAge)x
 //////var x, y;
 //////x = y = (3+5)*4 -6;
 //////x = x * 2;
@@ -282,34 +283,132 @@
 //var isDesigner = john.indexOf('designer') === -1 ? 'john is not a designer' : 'john is a designer';
 //console.log(isDesigner);
 
-var tipAmmount = [];
-var finalAmmount = [];
+//var tipAmmount = [];
+//var finalAmmount = [];
+//
+//var tipCalculator = function(price)
+//{
+//    if(price < 50){
+//        var tip = price * 20/100
+//         finalAmmount.push(price + tip) 
+//        tipAmmount.push(tip);
+//    }else if ( price > 50 && price < 200){
+//        var tip = price * 15/100
+//         finalAmmount.push(price + tip) 
+//        tipAmmount.push(tip);
+//    }else if(price > 200){
+//        var tip = price * 10/100
+//         finalAmmount.push(price + tip) 
+//        tipAmmount.push(tip);
+//    }
+//}
+//
+////var finalCalculator = function(bill){
+////var originBill = bill;
+////    finalAmmount.push(originBill + tipCalculator(bill)); 
+////}
+//
+//tipCalculator(124);
+//tipCalculator(48);
+//tipCalculator(268);
+//console.log(tipAmmount);
+//console.log(finalAmmount);
 
-var tipCalculator = function(price)
-{
-    if(price < 50){
-        var tip = price * 20/100
-         finalAmmount.push(price + tip) 
-        tipAmmount.push(tip);
-    }else if ( price > 50 && price < 200){
-        var tip = price * 15/100
-         finalAmmount.push(price + tip) 
-        tipAmmount.push(tip);
-    }else if(price > 200){
-        var tip = price * 10/100
-         finalAmmount.push(price + tip) 
-        tipAmmount.push(tip);
+
+//
+//var tipCal = function(bill){
+//    var price;
+//    if(bill < 50){
+//       price = bill * .2;
+//    } else if(bill >= 50 && bill < 200){
+//      price = bill * .15;
+//    } else{
+//       price= bill *.1;
+//    }
+//    return price;
+//}
+//var priceAmount = [124,48,268];
+//var tipAmmount = [tipCal(124),tipCal(48),tipCal(268)];
+//
+//console.log(tipAmmount[]);
+//console.log(priceAmount[0]+tipAmmount[0],priceAmount[1]+tipAmmount[1],priceAmount[2]+tipAmmount[2]);
+
+
+//var john = {
+//    firstName: 'John',
+//    lastName: 'Smith',
+//    birthYear: 1990,
+//    family: ['Jane','Mark','Bob','Emily'],
+//    job: 'teacher',
+//    isMarried: false
+//};
+//
+//console.log(john);
+//console.log(john.isMarried);
+////
+////
+//console.log(john.firstName);
+//console.log(john['lastName']);
+//var x = 'birthYear';
+//console.log(john[x]);
+////
+//john.job = 'designer';
+//john['isMarried'] = true;
+//console.log(john);
+//
+//
+//var jane = new Object();
+//jane.name = 'Jane';
+//jane.birthYear = 1969;
+//jane['lastName'] = 'Smith';
+//console.log(jane);
+
+//var john = {
+//    firstName: 'John',
+//    lastName: 'Smith',
+//    birthYear: 1980,
+//    family: ['Jane','Mark','Bob','Emily'],
+//    job: 'teacher',
+//    isMarried: false,
+//    calcAge: function(birthYear) {
+//        this.age = 2018 - this.birthYear;
+//    }
+//};
+//
+//john.calcAge();
+//console.log(john);
+
+var john = {
+    fullName : 'John Smith',
+    BMI : 0,
+    mass : 60,
+    height : 1.80,
+    calBMI : function(mass,height){
+    this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
     }
 }
 
-//var finalCalculator = function(bill){
-//var originBill = bill;
-//    finalAmmount.push(originBill + tipCalculator(bill)); 
-//}
+var mark = {
+    fullName : 'Mark Smith',
+    BMI : 0,
+    mass : 70,
+    height : 1.70,
+    calBMI : function(mass,height){
+    this.BMI = this.mass/(this.height * this.height);
+        return this.BMI;
+    }
+}
 
-tipCalculator(124);
-tipCalculator(48);
-tipCalculator(268);
-console.log(tipAmmount);
-console.log(finalAmmount);
+john.calBMI();
+mark.calBMI();
 
+if (mark.BMI > john.BMI){
+    console.log("Mark BMI is higher then John with score of " + mark.BMI);
+}else if(john.BMI > mark.BMI){
+    console.log("John BMI is higher then Mark with score of " + john.BMI);
+}else if(john.BMI == mark.BMI){
+    console.log("Both John and Mark BMI score are the same with John "+ john.BMI + " and Mark "+ mark.BMI);
+}else{
+    console.log("Something else");
+}
