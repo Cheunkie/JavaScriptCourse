@@ -433,3 +433,84 @@
 //for(var i = john.length - 1; i > 0; i-- ){
 //    console.log(john[i]);
 //}
+
+
+var john = {
+    fullName : "John Smith",
+    bills : [124,48,180],
+    tipArray : [],
+    Total : [],
+    //could move these arrays inside the function
+    calTip : function(){    
+            var percent; 
+            //initialise the arrays here
+    for(var i = 0; this.bills.length > i; i++){ 
+        if(this.bills[i] >= 50) {
+            //can make a variable that is equal to this.bills: var bill = this.bills[i];
+            percent = 0.2;
+        }else if(this.bills[i] > 50 && this.bills[i] < 200){
+            percent = 0.15;
+        }else if(this.bills[i] > 200){
+            percent = 0.10;
+        }
+        //could change the method to this.tipArray[i] = bills* percentage;
+        //and this.Total[i] = bill + bill * percentage;
+            this.tipArray.push(percent * this.bills[i]);
+            this.Total.push(this.tipArray[i]+this.bills[i]);
+            }
+        console.log(this.tipArray);
+        console.log(this.Total);
+        }
+    };
+ 
+
+
+
+//////////////////////////Mark's family
+var mark = {
+    fullName : "Mark Miller",
+    bills : [77,375,110,45],
+    calTip : function(){    
+            
+                this.tipArray = [];
+                this.Total = [];
+        
+    for(var i = 0; this.bills.length > i; i++){ 
+        var percentage;
+        var bill = this.bills[i];
+        if(bill < 100) {
+            percent = 0.2;
+        }else if(bill > 100 && bill < 300){
+            percent = 0.1;
+        }else if(bill > 300){
+            percent = 0.25;
+        }
+            this.tipArray[i] = percent * bill;
+            this.Total[i] = bill + bill * percent;
+            }
+        console.log(mark);
+        }
+    };
+
+////Calculating average tip
+var avgTip = function(tips){
+    var sum = 0;
+    for(var i = 0;tips.length > i; i++){
+        sum = sum+ tips[i];
+    }
+    return sum / tips.length;
+}
+//calculate average;
+john.calTip();
+mark.calTip();
+console.log(john);
+john.average = avgTip(john.tipArray);
+mark.average = avgTip(mark.tipArray);
+
+if (john.average > mark.average){
+    console.log("John has higher average on tip " + john.average);
+}else if(mark.average > john.average){
+    console.log("Mark has higher average on tip "+ mark.average);
+}else {
+    console.log("Both have equal average on tip");
+}
