@@ -2,17 +2,33 @@
 // Lecture: Hoisting
 
 
-
-
-
-
-
-
-
-
-
-
-
+//
+//function calculateAge(year){
+//    console.log(2018 -year);
+//}
+//
+//calculateAge(1990);
+//
+//
+//
+//var retirement = function (year){
+//    console.log( 65 - (2018-year));
+//}
+//
+//retirement(1990);
+//
+//
+//
+//console.log(age);
+//var age = 23;
+//
+//function foo(){
+//    var age = 65;
+//    console.log(age);
+//}
+//
+//foo();
+//console.log(age)
 
 
 
@@ -71,7 +87,36 @@ function third() {
 
 
 
+//console.log(this);
+//function calculateAge(year){
+//    console.log(2018-year);
+//    console.log(this);
+//}
+//calculateAge(1995);
 
 
+var john = {
+    name: "John",
+    yearOfBirth : 1990,
+    calculateAge: function(){
+        console.log(this);
+        console.log(2018 - this.yearOfBirth);
+        
+//        function innerFunction () {
+//            console.log(this);
+//        }
+//        innerFunction();
+    }
+};
+
+john.calculateAge();
 
 
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1984,
+    
+};
+
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
