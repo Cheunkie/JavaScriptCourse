@@ -500,7 +500,7 @@ var avgTip = function(tips){
     }
     return sum / tips.length;
 }
-//calculate average;
+//calculate average; 
 john.calTip();
 mark.calTip();
 console.log(john);
